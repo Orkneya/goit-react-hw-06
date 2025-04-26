@@ -16,6 +16,11 @@ export const counterReducer = (state = initialState, action) => {
       };
     case "RESET":
       return initialState;
+    case "CHANGE":
+      return {
+        ...state,
+        step: action.payload,
+      };
 
     default:
       return state;

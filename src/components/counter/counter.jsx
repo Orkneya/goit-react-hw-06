@@ -2,8 +2,8 @@ import { useDispatch, useSelector } from "react-redux";
 
 export const Counter = () => {
   const dispatch = useDispatch();
-  const handleChange = () => {
-    dispatch({ type: "CHANGE" });
+  const handleChange = (e) => {
+    dispatch({ type: "CHANGE", payload: +e.target.value });
   };
   const handlePlus = () => {
     dispatch({ type: "INCREMENT" });
